@@ -17,24 +17,29 @@ public class KigyoLetraOOP {
     public int[] kigyokLetrak = new int[100];
     public Random random = new Random();
 
-    public int KigyoLetraOOP() {
+    public KigyoLetraOOP() {
 
-        kigyokLetrak[4] = 14;
-        kigyokLetrak[9] = 31;
-        kigyokLetrak[20] = 37;
-        kigyokLetrak[49] = 11;
-
-        while (aktualPozicio < 100) {
-            aktualPozicio += random.nextInt(6) + 1;
-            if (aktualPozicio < 100 && kigyokLetrak[aktualPozicio] > 0) {
-                aktualPozicio = kigyokLetrak[aktualPozicio];
+        this.kigyokLetrak[4] = 14;
+        this.kigyokLetrak[9] = 31;
+        this.kigyokLetrak[20] = 37;
+        this.kigyokLetrak[49] = 11;
+        
+        }
+     public int jatek(){
+         
+         
+         
+        while (this.aktualPozicio < 100) {
+            this.aktualPozicio += random.nextInt(6) + 1;
+            if (this.aktualPozicio < 100 && this.kigyokLetrak[aktualPozicio] > 0) {
+                this.aktualPozicio = this.kigyokLetrak[aktualPozicio];
             }
-            dobasokSzama++;
+            this.dobasokSzama++;
             //System.out.println(kigyokLetrak [aktualPozicio]);
             // Arrays.binarySearch(kigyokLetrak, aktualPozicio);
 
         }
-        return dobasokSzama;
+        return this.dobasokSzama;
     }
 
     public int dobasokSzama() {
